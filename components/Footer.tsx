@@ -179,16 +179,12 @@ export default function Footer() {
               <div className="col-md-6">
                 <p className="copyright-text">
                   Copyright <i className="fal fa-copyright" /> 2024{" "}
-                  <a href="index.html">Frutin</a>. All Rights Reserved.
+                  <a href="index.html">Design By Sikido.vn</a>. All Rights
+                  Reserved.
                 </p>
               </div>
               <div className="col-md-6 text-md-end text-center">
-                <div className="payment-img">
-                  <img
-                    src="/assets/img/normal/payment_methods.png"
-                    alt="Image"
-                  />
-                </div>
+                <div className="payment-img"></div>
               </div>
             </div>
           </div>
