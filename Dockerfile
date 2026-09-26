@@ -3,6 +3,9 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
+# Clean up previous installations and build artifacts
+RUN rm -rf node_modules .next
+
 COPY package.json package-lock.json ./
 RUN npm install --legacy-peer-deps
 
@@ -15,6 +18,7 @@ FROM node:20-alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV production
+ENV PATH /app/node_modules/.bin:$PATH # Ensure Next.js binaries are in PATH
 
 # Copy built application from builder stage
 COPY --from=builder /app/.next ./.next
