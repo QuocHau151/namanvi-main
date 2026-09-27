@@ -17,8 +17,9 @@ FROM node:20-alpine AS runner
 
 WORKDIR /app
 
-ENV NODE_ENV production
-ENV PATH /app/node_modules/.bin:$PATH # Ensure Next.js binaries are in PATH
+ENV NODE_ENV=production
+# Keep Next.js binaries available while preserving the base image PATH.
+ENV PATH=/app/node_modules/.bin:${PATH}
 
 # Copy built application from builder stage
 COPY --from=builder /app/.next ./.next
