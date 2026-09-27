@@ -1,0 +1,9 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        TEST: null
+    labels:
+      com.vibehost.role: FRONTEND
