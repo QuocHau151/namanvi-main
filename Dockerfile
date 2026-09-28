@@ -1,6 +1,8 @@
 # Stage 1: Install dependencies and build the application
 FROM node:20-alpine AS builder
 
+ARG TEST
+
 WORKDIR /app
 
 # Clean up previous installations and build artifacts
