@@ -7,3 +7,5 @@ services:
         - TEST
     labels:
       com.vibehost.role: FRONTEND
+      com.vibehost.route: both
+      com.vibehost.app-port: "3000"
