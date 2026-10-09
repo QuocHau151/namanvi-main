@@ -107,9 +107,6 @@ export default function RootLayout({
         <link rel="stylesheet" href="/assets/css/style.css" />
       </head>
       <body className={`${inter.className} ${dm_sans.className} antialiased`}>
-        <div className="fixed inset-x-0 top-0 z-[60] bg-black px-4 py-2 text-center text-sm text-white">
-          {process.env.TEST ?? ""}
-        </div>
         <Header />
         <div className="mt-[120px] lg:mt-[140px]"> {children}</div>
 
